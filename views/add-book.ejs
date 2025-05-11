@@ -1,0 +1,26 @@
+<%- include('includes/head') %>
+  <link rel="stylesheet" href="/css/add-book.css" />
+</head>
+<body>
+  <%- include('includes/navbar') %>
+  <div class="container">
+    <h1>Rate a Book</h1>
+    <form id="rating-form" action="/add-book" method="POST">
+      <label for="book-name">Book Title</label>
+      <input type="text" id="book-name" name="name" placeholder="Enter book title" required />
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select rating</option>
+        <option value="1">★☆☆☆☆ (1)</option>
+        <option value="2">★★☆☆☆ (2)</option>
+        <option value="3">★★★☆☆ (3)</option>
+        <option value="4">★★★★☆ (4)</option>
+        <option value="5">★★★★★ (5)</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

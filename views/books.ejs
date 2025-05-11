@@ -1,0 +1,25 @@
+<%- include('includes/head') %>
+  <link rel="stylesheet" href="/css/books.css" />
+</head>
+<body>
+    <%- include('includes/navbar') %>
+  <div class="container">
+    <h1>Book Ratings</h1>
+    <ul class="book-list">
+      <% books.forEach(book => { %>
+        <li>
+          <span class="title"><%= book.name %></span>
+          <span class="stars">
+            <% for (let i = 0; i < book.rating; i++) { %>
+              ★
+            <% } %>
+            <% for (let i = book.rating; i < 5; i++) { %>
+              ☆
+            <% } %>
+          </span>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>
