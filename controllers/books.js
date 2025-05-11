@@ -17,7 +17,6 @@ exports.postAddBook = (req, res, next) =>{
 exports.getBook = (req, res, next) => {
 
     Book.fetchall(boks => {
-        console.log(boks);
         res.render('books', {
             pageTitle:'Read it',
             path: '/',
